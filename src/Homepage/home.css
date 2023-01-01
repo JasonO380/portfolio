@@ -1,0 +1,29 @@
+.stats_div {
+    margin-left: 40px;
+    color: #fff;
+}
+
+.button_container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.profile_pic {
+    object-fit: contain;
+}
+
+.heading {
+    font-family:'Red Hat Display', sans-serif;
+    color: #fff;
+    font-size: 100px;
+}
+
+.icon {
+    font-size: 50px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
