@@ -1,0 +1,17 @@
+.home_mobile_wrapper {
+    background-color: black;
+}
+
+.profile_contacts_projects_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts_tecnologies_div {
+    width: 45%;
+}
+
+.projects_profile_div {
+    width: 55%;
+    overflow: hidden;
+}

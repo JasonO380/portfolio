@@ -6,18 +6,9 @@ import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { FaGit } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FaExpress } from 'react-icons/fa';
-import { FaDatabase } from "react-icons/fa";
 import { DiDjango } from 'react-icons/di';
-import { FaMongoose } from 'react-icons/fa';
 import { DiJavascript1 } from "react-icons/di";
-import { DiJavascript } from "react-icons/di";
 import { DiMongodb } from "react-icons/di";
-import { FaShippingFast } from "react-icons/fa";
-
-
-
-
 
 const technologyIcons = {
     "HTML":<FaHtml5 />,

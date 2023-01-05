@@ -1,0 +1,7 @@
+.button_container_mobile {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    justify-content: center;
+    
+}

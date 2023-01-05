@@ -1,29 +1,66 @@
-.stats_div {
-    margin-left: 40px;
+.info_div {
+    padding-left: 40px;
     color: #fff;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
 }
 
-.button_container {
+.heading_text {
+    font-family: 'Red Hat Display', sans-serif;
+    color: #fff;
+    font-size: 7vw;
+}
+
+.descriptive_text {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 3vw;
+}
+
+.button_technology_container {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Red Hat Display', sans-serif;
+    flex: 0 50%;
+    gap: 50px;
+}
+
+.button_div {
     display: flex;
     flex-direction: column;
-    font-family: 'Red Hat Display', sans-serif;
+}
+
+.technology_div {
+    margin-top: 5px;
+}
+
+.button_style {
+    margin-top: 15px;
+    width: fit-content;
+    border-radius: 7px;
+    background-color: black;
+    border:2px solid red;
+    color: white;
+    padding: 4px;
+    font-size: 2vw;
+    /* font-size:30px */
+}
+
+.profile_div {
+    width: 50%;
 }
 
 .profile_pic {
     object-fit: contain;
-}
-
-.heading {
-    font-family:'Red Hat Display', sans-serif;
-    color: #fff;
-    font-size: 100px;
+    max-width: 100%;
 }
 
 .icon {
-    font-size: 50px;
+    font-size: 3vw;
+    width: fit-content;
 }
 
-p {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
+.icon_button {
+    pointer-events: none;
 }

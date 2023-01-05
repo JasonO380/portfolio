@@ -1,0 +1,13 @@
+.heading_wrapper_mobile {
+    color: white;
+    display: flex;
+    gap: 20px;
+}
+
+.name {
+    margin: auto;
+}
+
+.job_title {
+    margin: auto;
+}
