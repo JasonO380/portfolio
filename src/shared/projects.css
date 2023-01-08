@@ -19,9 +19,11 @@
 @media screen and (max-width: 600px) {
     .projects_wrapper {
         margin-top: 10px;
-        width: 100%;
+        margin-left: 15px;
+        width: 85%;
     }
     .logo {
         height:3rem;
+        border-radius: 100%;
     }
 }

@@ -1,4 +1,4 @@
-const buttonStyle = {
+const buttonStyle_desktop = {
     marginTop: 15,
     width: 'fit-content',
     borderRadius: 7,
@@ -6,7 +6,7 @@ const buttonStyle = {
     border:'2px solid red',
     color: 'white',
     padding: 4,
-    fontSize:30
+    fontSize:"2vw"
 }
 
 const buttonStyle_mobile = {
@@ -20,4 +20,4 @@ const buttonStyle_mobile = {
     fontSize:"3.5vw"
 }
 
-export {buttonStyle, buttonStyle_mobile};
+export {buttonStyle_desktop, buttonStyle_mobile};
