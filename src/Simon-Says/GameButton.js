@@ -1,33 +1,25 @@
-import React, {useState, useEffect} from "react";
-import { motion } from "framer-motion";
+import React from "react";
+import "./Simon-Says-Game.css";
+import "./GameButton.css";
 
 
 const GameButton = (props) => {
     const buttons = props.btn;
-    const player = props.player;
-    const simon = props.simon;
-    // console.log(player + " player");
-    // console.log(simon + " simon");
-    const [gamePattern, setGamePattern] = useState([])
-
-    const playPattern = (simon) => {
-        setGamePattern((preVal)=> [...preVal, simon])
-        console.log(gamePattern)
-    }
-
     return (
-        <div className="button_container_mobile">
+        <div className="game_button_container">
             {buttons.map((btn, index)=> {
                 const color = btn.name;
                 return (
-                    <motion.button
-                    onPlay={playPattern}
-                    whileTap={{scale:.9, color:"black", backgroundColor: "grey"}}
+                    <div className={`btn_div_${btn.name}`}>
+                    <button
                     onClick={props.onClick}
                     style={{backgroundColor:color}}
                     id={btn.name}
+                    animate={props.animate}
                     play={props.play}
-                    name={btn.name}>{btn.name}</motion.button>
+                    className={btn.name}
+                    name={btn.name} />
+                    </div>
                 )
             })}
         </div>

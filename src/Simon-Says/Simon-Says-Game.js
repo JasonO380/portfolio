@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GameButton from "./GameButton";
+import instructions from "./instructions";
+import { heading_game_text_desktop, descriptive_game_text } from "../CSS/font-styles";
 import { motion } from "framer-motion";
+import sounds from "./btn-sounds";
 import "./Simon-Says-Game.css";
 
 let click;
 let gamePattern = [];
 let playerPattern = [];
 let level = 0;
-let currentIndex;
+let i = 0;
 const SimonSays = () => {
     const [startGame, setStartGame] = useState(false);
-    const [player, setPlayer] = useState([]);
-    const [simon, setSimon] = useState([]);
+    const [score, setScore] = useState(0);
     const buttons = [
         { id: 0, name: "red" },
         { id: 1, name: "blue" },
@@ -19,87 +21,104 @@ const SimonSays = () => {
         { id: 3, name: "yellow" },
     ];
     const playerClick = (event) => {
-        currentIndex = 0;
         click = event.target.name;
         playerPattern.push(click);
-        console.log(playerPattern + " player choice");
-        checkPattern();
+        animateSequence(click)
+        playSound(sounds[click]);
+        if (startGame) {
+            checkPattern(playerPattern.length - 1);
+        }
     };
 
-    const animateSequence = (gamePattern) => {
-        let i = 0;
-        const animateButton = () => {
+    const animateSequence = (color) => {
+        console.log(color);
+        const button = document.getElementById(color);
+        console.log(button);
+        if (button) {
+            button.classList.add("animated");
+            console.log(button);
             setTimeout(() => {
-                // Animate the current button in the sequence
-                const buttons = document.getElementsByClassName(gamePattern[i]);
-                for (let i = 0; i < buttons.length; i++) {
-                    buttons[i].classList.add("animated");
-                    setTimeout(() => {
-                        buttons[i].classList.remove("animated");
-                    }, 500);
-                }
-                // Move on to the next button in the sequence
-                i++;
-                if (i < gamePattern.length) {
-                    animateButton();
-                }
-            }, 1000);
-        };
-
-        animateButton();
+                button.classList.remove("animated");
+                console.log(button);
+            }, 200);
+        }
     };
 
-    const checkPattern = () => {
-        console.log(currentIndex + " current index");
-        console.log(gamePattern[currentIndex]);
-        console.log(playerPattern[currentIndex]);
-        if (playerPattern.length !== gamePattern.length) {
-            if (playerPattern[currentIndex] === gamePattern[currentIndex]) {
-                console.log('match')
-                currentIndex ++
-            } else {
-                startOver();
-                console.log("no match reset game here");
-            } 
+    const checkPattern = (eachEntry) => {
+        if (playerPattern[eachEntry] === gamePattern[eachEntry]) {
+            console.log("match");
+            setScore(prevScore => prevScore + 1)
+            if (playerPattern.length === gamePattern.length) {
+                setTimeout(() => {
+                    nextSequence();
+                }, 1000);
+            }
         } else {
             setTimeout(() => {
-                nextSequence();
-            }, 1000);
+                playSound(sounds["wrong"]);
+                setTimeout(() => {
+                    startOver();
+                }, 1100);
+            }, 600);
         }
     };
 
     const nextSequence = () => {
         playerPattern = [];
         level++;
-        console.log(level + " current level");
         setStartGame(true);
-        const randomNum = Math.floor(Math.random() * 3);
+        const randomNum = Math.floor(Math.random() * 4);
         const simonSays = buttons[randomNum].name;
-        console.log(simonSays + " simonSays value");
-        gamePattern.push(simonSays);
-        // animateSequence(gamePattern);
-        console.log(gamePattern + " game choice with i");
+        if (level === 1) {
+            playSound(sounds["start"]);
+            setTimeout(() => {
+                playSound(sounds[simonSays]);
+                gamePattern.push(simonSays);
+                animateSequence(simonSays);
+            }, 600);
+        } else {
+            playSound(sounds[simonSays]);
+            gamePattern.push(simonSays);
+            animateSequence(simonSays);
+        }
+    };
+
+    const playSound = (sound) => {
+        const audio = new Audio(sound);
+        audio.play();
     };
 
     const startOver = () => {
         setStartGame(false);
         gamePattern = [];
         level = 0;
+        i = 0;
+        setScore(0)
     };
 
     return (
         <div className="game_wrapper">
+            <div className="start_button_div">
+                {!startGame && (
+                    <button 
+                    className="start_button"
+                    onClick={nextSequence}>START GAME</button>
+                )}
+                {!startGame ? (
+                <div className="instructions">
+                    <p>{instructions}</p>
+                </div> 
+            ) : (
+                <div className="score">
+                    <p>SCORE: {score}</p>
+                </div>
+            )}
+            </div>
             <GameButton
-                player={player}
-                simon={simon}
+                animate={animateSequence}
                 onClick={playerClick}
                 btn={buttons}
             />
-            <div>
-                {!startGame && (
-                    <button onClick={nextSequence}>START GAME</button>
-                )}
-            </div>
         </div>
     );
 };
