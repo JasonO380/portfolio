@@ -17,7 +17,7 @@ const buttonStyle_mobile = {
     border:'.5px solid red',
     color: 'white',
     padding: 4,
-    fontSize:"2vh"
+    fontSize:"1.6vh"
 }
 
 const buttonStyle_about_me = {
