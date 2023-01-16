@@ -21,7 +21,8 @@ const buttonStyle_mobile = {
 }
 
 const buttonStyle_about_me = {
-    marginTop: 25,
+    marginTop: 15,
+    marginBottom:15,
     marginLeft: 20,
     width: 'fit-content',
     borderRadius: 3,

@@ -12,19 +12,31 @@ const Contacts = () => {
                 whileTap={{ rotateY: 360, color: "red" }}
                 className="icon"
             >
-                <FaGithub />
+                <a
+                className="contact_link" 
+                href="https://github.com/JasonO380">
+                    <FaGithub />
+                </a>
             </motion.h1>
             <motion.h1
                 whileTap={{ rotateZ: 360, color: "red" }}
                 className="icon"
             >
-                <FaLinkedin />
+                <a
+                className="contact_link" 
+                href="https://www.linkedin.com/in/jason-ollada-4a1a1522/">
+                    <FaLinkedin />
+                </a>
             </motion.h1>
             <motion.h1
                 whileTap={{ rotateX: 360, color: "red" }}
                 className="icon"
             >
-                <FaEnvelopeSquare />
+                <a
+                className="contact_link" 
+                href="mailto:JMOllada@gmail.com">
+                    <FaEnvelopeSquare />
+                </a>
             </motion.h1>
         </div>
     );

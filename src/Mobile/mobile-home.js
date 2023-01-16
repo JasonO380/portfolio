@@ -39,7 +39,9 @@ const MobileHome = () => {
 
     return (
         <React.Fragment>
-        <div className="home_mobile_wrapper">
+        <div
+        style={{backgroundImage: `url(${abstract4}`,}} 
+        className="home_mobile_wrapper">
             <Heading />
             <Button
             onClick={handleClick} 
@@ -56,9 +58,9 @@ const MobileHome = () => {
                 </div>
             </div>
         </div>
-        <div
+        {/* <div
         style={{backgroundImage: `url(${abstract4}`,}} 
-        className="footer"></div>
+        className="footer"></div> */}
         </React.Fragment>
     );
 };

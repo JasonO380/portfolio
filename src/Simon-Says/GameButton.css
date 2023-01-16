@@ -27,29 +27,39 @@
 }
 
 .red {
-    height: 7rem;
-    width: 5rem;
-    border-radius: 50px;
+    height: 75px;
+    width: 90px;
+    border-radius: 20px;
+    /* height: 7rem;
+    width: 5rem; */
+    /* border-radius: 50px; */
 }
 
 .blue {
-    height: 5rem;
-    width: 7rem;
+    height: 75px;
+    width: 90px;
+    /* height: 5rem;
+    width: 7rem; */
     border-radius: 20px;
-    margin-right: 70px;
+    margin-right: 30px;
+    /* margin-right: 70px; */
 }
 
 .green {
-    height: 5rem;
-    width: 7rem;
+    height: 75px;
+    width: 90px;
+    /* height: 5rem;
+    width: 7rem; */
     border-radius: 20px;
     opacity: 1;
 }
 
 .yellow {
-    height: 7rem;
-    width: 5rem;
-    border-radius: 50px;
+    height: 75px;
+    width: 90px;
+    /* height: 7rem;
+    width: 5rem; */
+    border-radius: 20px;
 }
 
 .animated {
