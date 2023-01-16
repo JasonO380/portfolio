@@ -7,6 +7,10 @@ import Projects from "../shared/projects";
 import Technologies from "../shared/technologies";
 import Contacts from "../shared/contacts";
 import Button from "../shared/button";
+import abstract from "../Images/abstract_ai.jpeg";
+import abstract2 from "../Images/abstract2.jpeg";
+import abstract3 from "../Images/abstract3.jpeg";
+import abstract4 from "../Images/abstract4.jpeg";
 import "./mobile-home.css";
 
 
@@ -52,6 +56,9 @@ const MobileHome = () => {
                 </div>
             </div>
         </div>
+        <div
+        style={{backgroundImage: `url(${abstract4}`,}} 
+        className="footer"></div>
         </React.Fragment>
     );
 };

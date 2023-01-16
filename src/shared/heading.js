@@ -7,7 +7,7 @@ import "./heading.css";
 
 const Heading = () => {
     return (
-        <div className="heading_wrapper_mobile">
+        <div className="heading_wrapper">
             <div className="name">
                 <h1 style={heading_text_mobile}>Jason Ollada</h1>
             </div>

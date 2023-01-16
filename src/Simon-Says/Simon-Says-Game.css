@@ -60,6 +60,9 @@
         height: 25rem;
         width: 90%;
     }
+    .start_home_button{
+        font-size: 3.5vh;
+    }
     .game_button_container {
         width: 90%;
     }

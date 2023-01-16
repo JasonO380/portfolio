@@ -1,4 +1,4 @@
-.heading_wrapper_mobile {
+.heading_wrapper {
     color: white;
     display: flex;
     gap: 20px;
@@ -10,4 +10,10 @@
 
 .job_title {
     margin: auto;
+}
+
+@media screen and (min-width: 601px){
+    .heading_wrapper{
+        gap: 20px;
+    }
 }
