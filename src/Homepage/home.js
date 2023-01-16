@@ -45,7 +45,7 @@ const Home = () => {
                     <div className="main_title">
                         <h1 className="heading_text">Jason Ollada</h1>
                         <h1 className="descriptive_text">
-                            Front end web developer
+                            Full stack developer
                         </h1>
                     </div>
                     <div className="button_technology_container">
