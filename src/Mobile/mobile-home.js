@@ -27,10 +27,10 @@ const MobileHome = () => {
         }
     }
     const buttons = [
-        { name: "ABOUT ME" },
+        { name: "ABOUT ME", path:"/aboutme" },
         { name: "TECHNOLOGIES" },
         { name: "PROJECTS" },
-        { name: "GAMES" },
+        { name: "GAMES", path:"/games" },
     ];
 
     return (

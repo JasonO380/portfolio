@@ -6,9 +6,6 @@ import Technologies from "../shared/technologies";
 import Projects from "../shared/projects";
 import Button from "../shared/button";
 import { heading_text, descriptive_text_desktop } from "../CSS/font-styles";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaEnvelopeOpen } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 
 import "./home.css";
@@ -17,10 +14,10 @@ const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isProjects, setIsProjects] = useState(false);
     const buttons = [
-        { name: "ABOUT ME" },
+        { name: "ABOUT ME", path:"/aboutme" },
         { name: "TECHNOLOGIES" },
         { name: "PROJECTS" },
-        { name: "GAMES" },
+        { name: "GAMES", path:"/games" },
     ];
     const animation = {
         offscreen: { opacity: 0 },

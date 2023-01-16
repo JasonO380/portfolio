@@ -1,0 +1,43 @@
+.about_me_wrapper {
+    height: 100vh;
+    display: flex;
+    background: black;
+}
+
+.about_me_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding-bottom: 10px;
+    height: fit-content;
+    width: 65%;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.about_me_heading {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 4vh;
+    color: black;
+}
+
+.about_me_text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4vh;
+    color: black;
+    width: 95%;
+    font-weight: 800;
+}
+
+@media screen and (min-width: 601px) {
+    .about_me_heading {
+        font-size: 4vh;
+    }
+    .about_me_text {
+        font-size: 2vh;
+        width: 80%;
+    }
+}

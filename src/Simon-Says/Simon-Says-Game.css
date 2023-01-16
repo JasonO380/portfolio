@@ -5,22 +5,30 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding-bottom: 30px;
+}
+
+.start_home_div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 15px;
+
 }
 
 .start_button_div {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     height: 10rem;
 }
 
-.start_button {
+.start_home_button {
     font-family: VT323, monospace;
     color: rgb(93, 246, 17);
     border: 3px solid red;
     width: fit-content;
-    font-size: 7vh;
+    font-size: 5vh;
     height: fit-content;
     background-color: black;
 }
@@ -34,6 +42,8 @@
 }
 
 .score {
+    display: flex;
+    justify-content: center;
     font-family: VT323, monospace;
     color: rgb(93, 246, 17);
     font-size: 7vh;
@@ -41,30 +51,26 @@
     background-color: black;
 }
 
-.game_button_container{
+.game_button_container {
     border: 3px solid rgb(209, 210, 210);
 }
 
-@media screen and (max-width:600px){
-    .start_button_div{
-        height: 15rem;
+@media screen and (max-width: 600px) {
+    .start_home_container {
+        height: 25rem;
         width: 90%;
     }
-    .game_button_container{
+    .game_button_container {
         width: 90%;
-        /* border: 3px solid rgb(209, 210, 210); */
     }
 }
 
-@media screen and (min-width:601px){
-    .start_button_div{
-        height: 15rem;
+@media screen and (min-width: 601px) {
+    .start_home_container {
+        height: 25rem;
         width: 60%;
     }
-    .game_button_container{
-        width: fit-content
-        /* border: 3px solid rgb(209, 210, 210); */
+    .game_button_container {
+        width: fit-content;
     }
 }
-
-

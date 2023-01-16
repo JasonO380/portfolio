@@ -16,7 +16,9 @@ const Projects = (props) => {
                     <h1 style={props.style}>Barbell Factor</h1>
                 </div>
                 <div className='projects_img'>
-                    <img className='logo' src={logo} />
+                    <a href="https://barbellfactor.com">
+                        <img className='logo' src={logo} />
+                    </a>
                 </div>
             </div>
             <div className="projects_body">
@@ -30,10 +32,9 @@ const Projects = (props) => {
                 <h3 style={props.style}>Purpose</h3>
                 <ul>
                     <li style={props.style}>Allow clients to track macro nutrient and workout data</li>
-                    <li style={props.style}>Display my ability and knowledge on how to create read update and delete data</li>
+                    <li style={props.style}>Display my ability and knowledge on how to build an API from scratch and connect to that API to create read update and delete data</li>
                     <li style={props.style}>Display my UI/UX capability with smooth page transitions, animations and user intuitive design</li>
                 </ul>
-                <a href="www.barbellfactor.com">Barbell Factor</a>
             </div>
         </motion.div>
     )

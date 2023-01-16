@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import GameButton from "./GameButton";
 import instructions from "./instructions";
 import { heading_game_text_desktop, descriptive_game_text } from "../CSS/font-styles";
-import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 import sounds from "./btn-sounds";
 import "./Simon-Says-Game.css";
 
@@ -98,11 +98,18 @@ const SimonSays = () => {
 
     return (
         <div className="game_wrapper">
-            <div className="start_button_div">
+            <div className="start_home_container">
                 {!startGame && (
+                    <div className="start_home_div">
                     <button 
-                    className="start_button"
+                    className="start_home_button"
                     onClick={nextSequence}>START GAME</button>
+                    <NavLink to="/">
+                    <button 
+                    className="start_home_button"
+                    >HOME</button>
+                    </NavLink>
+                    </div>
                 )}
                 {!startGame ? (
                 <div className="instructions">
