@@ -21,13 +21,13 @@
 .about_me_heading {
     font-family: "Red Hat Display", sans-serif;
     font-size: 2vh;
-    color: black;
+    color: white;
 }
 
 .about_me_text {
     font-family: "Montserrat", sans-serif;
     font-size: .8vh;
-    color: black;
+    color: white;
     width: 95%;
     font-weight: 800;
 }
@@ -48,7 +48,7 @@
         background-size: cover;
     }
     .about_me_text {
-        font-size: 1vh;
+        font-size: 1.1vh;
         width: 80%;
     }
 }
