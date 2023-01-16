@@ -1,7 +1,7 @@
 import React from "react";
 import ai from "../Images/AI_background.jpeg";
 import ai3 from "../Images/ai3.jpeg";
-import { buttonStyle_about_me } from "../CSS/button-style";
+import { buttonStyle_about_me, buttonStyle_about_me_desktop } from "../CSS/button-style";
 import { NavLink } from "react-router-dom";
 import "./about-me.css";
 
@@ -36,9 +36,9 @@ const AboutMe = () => {
                         together
                     </p>
                 </div>
-                <div className="about_me_button_div">
+                <div className="about_me_button_div_desktop">
                     <NavLink to="/">
-                        <button style={buttonStyle_about_me}>HOME</button>
+                        <button style={buttonStyle_about_me_desktop}>HOME</button>
                     </NavLink>
                 </div>
             </div>
