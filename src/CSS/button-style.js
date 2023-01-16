@@ -29,7 +29,7 @@ const buttonStyle_about_me = {
     border:'.5px solid red',
     color: 'white',
     padding: 4,
-    fontSize:"4vh"
+    fontSize:"2vh"
 }
 
 export {buttonStyle_desktop, buttonStyle_mobile, buttonStyle_about_me};
