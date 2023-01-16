@@ -13,13 +13,13 @@ const descriptive_text_desktop = {
 const heading_text_mobile = {
     fontFamily: "Red Hat Display, sans-serif",
     color: "#fff",
-    fontSize: "7vw",
+    fontSize: "2.5vh",
 };
 
 const sub_heading_text_mobile = {
     fontFamily: "Montserrat, sans-serif",
     color: "#fff",
-    fontSize: "5vw",
+    fontSize: "2vh",
 };
 
 const descriptive_text_mobile = {
